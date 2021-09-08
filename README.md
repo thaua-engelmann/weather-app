@@ -11,4 +11,5 @@ A vanilla javascript Weather App using openWeatherMap API
 - <img align="center" alt="Thauã-Js" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> JAVASCRIPT
 
 ## # Screenshots
-<img src="https://snipboard.io/LwTVXf.jpg" width="400" target="_blank">
+<img src="https://snipboard.io/gbvB75.jpg" width="400"> <img src="https://snipboard.io/LwTVXf.jpg" width="400">
+<img src="https://snipboard.io/XvN3E0.jpg" width="400"> <img src="https://snipboard.io/FI5Pio.jpg" width="400">
