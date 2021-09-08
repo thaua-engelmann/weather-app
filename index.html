@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/main.min.css">
+    <title>Weather App</title>
+</head>
+<body>
+
+    <main class="container flex-center">
+        <section class="weather-box">
+            <header>
+                <div class="header-text my-1">
+                    <i class="fas fa-arrow-left"></i>
+                    Weather App
+                </div>
+            </header>
+            <div class="weather-input">
+                <div class="input-section">
+                    <label class="sr-only" for="city-input">Insert a valid city name</label>
+                    <input id="city-input" type="text" placeholder="Enter city name" required>
+                    <button class="btn check-weather">Check Weather</button>
+                </div>
+                <div class="separator">
+                    <div></div>
+                    <div>or</div>
+                    <div></div>
+                </div>
+                <div class="get-location">
+                    <button class="btn location">Get Device Location</button>
+                </div>
+            </div>
+            <div class="weather-api">
+                <img src="" alt="">
+                <div class="converter">
+                    <button class="celsius">°C</button>
+                    |
+                    <button class="fahrenheit">°F</button>
+                </div>
+                <div class="temperature">
+                    <span class="numb">20</span>
+                    <span class="deg">°C</span>
+                </div>
+                <div class="weather-status">Broken Clouds</div>
+                <div class="location my-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Sapiranga, Brazil</span>
+                </div>
+                <div class="bottom-details flex-between">
+                    <div class="column feels">
+                        <i class="fas fa-thermometer-three-quarters"></i>
+                        <div class="details">
+                            <div class="temp">
+                                <span class="numb">22°C</span>
+                                <span class="deg">°C</span>
+                            </div>
+                            <p>Feels Like</p>
+                        </div>
+                    </div>
+                    <div class="column humidity">
+                        <i class="fas fa-tint"></i>
+                        <div class="details">
+                            <span class="numb">87%</span>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Error messages -->
+    <ul class="error-list">
+        <li class="get-location-error error">
+            <i class="fas fa-exclamation-triangle"></i>
+            Geo Location is not allowed
+        </li>
+        <li class="invalid-city-error error">
+            <i class="fas fa-times-circle"></i>
+            <span>city</span> ins't a valid city name
+        </li>
+    </ul>
+
+    <!-- Github code -->
+    <div class="github">
+        <div class="code">
+            <a href="https://github.com/thaua-engelmann/naruto-quiiz" target="_blank">
+                <i class="fas fa-code"></i>
+                <span>github</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@import 'config';
+@import 'utilities';
+@import 'reset';
+
+// Weather App Box;
+.weather-box {
+    max-width: 40rem;
+    width: 90%;
+    background-color: $white-color;
+    box-shadow: 0 0 10px #444;
+    border-radius: .5rem;
+    text-align: center;
+
+    &.active {
+        .header-text i {
+            display: block;
+            cursor: pointer;
+        }
+
+        .weather-input {
+            display: none;
+        }
+
+        .weather-api {
+            display: block;
+        }
+    }
+
+    header {
+        color: springgreen;
+        font-weight: 600;
+        font-size: 2.5rem;
+        border-bottom: 1px solid lightgray;
+
+        .header-text {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 0 2rem;
+
+            i {display: none;}
+        }
+    }
+
+    .weather-input {
+        width: 100%;
+
+        .input-section, .get-location {
+            padding: 2rem;
+            text-align: center;
+    
+            input {
+                width: 100%;
+                padding: 1.5rem;
+                text-align: center;
+                font-size: 1.8rem;
+                border: lightgray 1px solid;
+                border-radius: .7rem;
+                outline: none;
+                margin-bottom: 2rem;
+                letter-spacing: 2px;
+    
+                &:focus {
+                    border: springgreen 2px solid;
+                }
+            }
+    
+            button {
+                position: relative;
+                width: 100%;
+                padding: 1.4rem;
+                border-radius: .6rem;
+                border: none;
+                font-size: 1.7rem;
+                cursor: pointer;
+                font-weight: 600;
+                transition: .2s;
+    
+                &.check-weather {
+                    background-color: springgreen;
+                    color: #fff;
+    
+                    &:hover {
+                        background-color: rgb(0, 190, 95);
+                    }
+                }
+    
+                &.location {
+                    background-color: #ccc;
+    
+                    &:hover {
+                        background-color: rgb(158, 158, 158);
+                    }
+                }
+            }
+        }
+    }
+
+    .weather-api {
+        position: relative;
+        text-align: center;
+        padding: 2rem;
+        display: none;
+
+        .converter {
+            position: absolute;
+            top: 3rem;
+            right: 3rem;
+
+            button {
+                font-size: 1.8rem;
+                width: 3rem;
+                height: 3rem;
+                background-color: #ccc;
+
+                &:hover {
+                    background-color: #bbb;
+                }
+            }
+        }
+
+        img {
+            width: 11rem;
+        }
+
+        .temperature {
+            font-size: 7rem;
+            font-weight: bold;
+            position: relative;
+            left: 2.4rem;
+
+            .deg {
+                font-size: 4rem;
+                position: relative;
+                top: -2rem;
+                left: -2rem;
+            }
+        }
+
+        .weather-status {
+            font-weight: 600;
+            font-size: 1.7rem;
+        }
+
+        .location {
+            font-size: 2.5rem;
+            background-color: lightgray;
+            padding: .5rem;
+            border-radius: .5rem;
+        }
+
+        .bottom-details {
+            width: 100%;
+            align-items: center;
+            gap: 1rem;
+
+            .column {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: left;
+                gap: 1rem;
+                border: 1px solid lightgray;
+                border-radius: .5rem;
+                line-height: 1.2;
+                padding: 1rem;
+
+                .numb {
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                }
+
+                .deg {
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                    position: relative;
+                    top: -.4rem;
+                }
+            }
+
+            i {
+                color: springgreen;
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+// Separator;
+.separator {
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+    font-weight: 600;
+
+    div:nth-child(1),
+    div:nth-child(3) {
+        width: 100%;
+        height: 1px;
+        background-color: lightgray;
+    }
+}
+
+// Media
+@media (max-width: 1100px) {
+    html {
+        font-size: 9px;
+    }
+}
